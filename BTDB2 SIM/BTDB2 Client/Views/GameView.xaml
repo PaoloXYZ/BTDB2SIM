@@ -1,0 +1,34 @@
+﻿<Page x:Class="BTDB2_Client.Views.GameView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BTDB2_Client.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GameView">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Content="▶" Command="{Binding StartGameCommand}" Width="60" HorizontalAlignment="Left" Background="Transparent"
+                ToolTip="Start/Resume"/>
+        
+        <Button Content="⏸" Command="{Binding PauseGameCommand}" Width="60" HorizontalAlignment="Left" Margin="60 0 0 0"
+                Background="Transparent" ToolTip="Pause"/>
+        
+        <Button Content="↩" Command="{Binding ResetGameCommand}" Width="60" HorizontalAlignment="Left" Margin="120 0 0 0"
+                Background="Transparent" ToolTip="Reset" MouseRightButtonDown="triggerResetFunctionality" Name="ResetGameButton"
+                
+                />
+
+        <Label Content="{Binding GameTime, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center"
+               HorizontalAlignment="Left" Width="100" Margin="190 0 0 0"/>
+        <Label Content="{Binding Cash, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center"
+               HorizontalAlignment="Left" Width="150" Margin="290 0 0 0"/>
+        <Label Content="{Binding Eco, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center"
+               HorizontalAlignment="Left" Width="150" Margin="400 0 0 0"/>
+    </Grid>
+</Page>

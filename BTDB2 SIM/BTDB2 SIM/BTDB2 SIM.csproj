@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>BTDB2_SIM</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BloonSends.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="bloonData.csv" />
+    <None Remove="note.txt" />
+  </ItemGroup>
+
+</Project>
